@@ -4,9 +4,7 @@
 #
 # For simplicity, this file contains only the most important settings by
 # default. All the other settings are documented here:
-#
 #     http://doc.scrapy.org/en/latest/topics/settings.html
-#
 
 BOT_NAME = 'gjqyxyxxcxxt'
 
@@ -20,6 +18,7 @@ DEFAULT_HEADERS = {
                 'Accept-Language': 'zh-cn',
                 'Connection':'keep-alive',
                 'Accept-Encoding': 'gzip, deflate',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
                 'Referer': 'http://yd.gsxt.gov.cn/QuerySummary'
 }
 
@@ -40,15 +39,16 @@ UNIQ_REDIS_HOST = '127.0.0.1'
 UNIQ_REDIS_PORT = 6379
 
 #log__________________________________________________________
-LOG_FILE = '../crawler.log'
+LOG_FILE = '../logs/crawler.log'
 LOG_LEVEL = 'DEBUG'
 
 DOWNLOADER_MIDDLEWARES = {
-    #'gjqyxyxxcxxt.user_agent_middleware.ProxyMiddleware': 100,
-    'gjqyxyxxcxxt.user_agent_middleware.MyUserAgentMiddleware': 200,
+    'gjqyxyxxcxxt.user_agent_middleware.ProxyMiddleware': 100,
+    'gjqyxyxxcxxt.user_agent_middleware.MyUserAgentMiddleware': 200
 }
 
 ITEM_PIPELINES = {
     'gjqyxyxxcxxt.pipelines.GjqyxyxxcxxtPipeline': 100
 }
+
 DOWNLOAD_TIMEOUT = 10

@@ -129,3 +129,43 @@ def add_company_name_to_req(conn, company_name):
     cursor = conn.cursor()
     cursor.execute(req_sql)
     conn.commit()
+
+def add_base_info_to_mysql(conn, retData):
+    #base_info
+    b_sql = 'INSERT INTO gsxt_data(ENTNAME, GSZCH, UNISCID, ENTTYPE, LEREP, REGCAP, ESTDATE, DOM, OPFROM, OPTO, REGORG, APPRDATE, REGSTATE, CREATETIME, OPSCOPE) VALUES (\'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\')' % (
+                            retData['ENTNAME'], retData['REGNO'], retData['UNISCID'], retData['ENTTYPE'], retData['LEREP'],
+                            (retData['REGCAP']), retData['ESTDATE'], retData['DOM'], retData['OPFROM'], retData['OPTO'],
+                            retData['REGORG'], retData['APPRDATE'], retData['REGSTATE'], retData['crawl_time'], retData['OPSCOPE'])
+    cursor = conn.cursor()
+    cursor.execute(b_sql)
+    conn.commit()
+
+def add_ryxx_to_mysql(conn, retData):
+    for ryxx in retData['PERINFO']:
+        r_sql = 'INSERT INTO gsxt_ryxx (公司名称, 姓名, 职位) VALUES (\'%s\', \'%s\', \'%s\')' % \
+            (retData['ENTNAME'].encode('utf-8') if retData['ENTNAME'] else retData['ENTNAME'], 
+                ryxx['NAME'].encode('utf-8') if ryxx['NAME'] else ryxx['NAME'],
+                ryxx['POSITION'].encode('utf-8') if ryxx['POSITION'] else ryxx['POSITION'])
+    cursor = conn.cursor()
+    cursor.execute(r_sql)
+    conn.commit()
+
+def add_bgxx_to_mysql(conn, retData):
+    for bgxx in retData['CHGINFO']:
+        bg_sql = 'INSERT INTO gsxt_bgxx (公司名称, 变更事项, 变更前内容, 变更后内容, 变更日期) VALUES (\'%s\', \'%s\', \'%s\', \'%s\', \'%s\')' % \
+                    (retData['ENTNAME'].encode('utf-8') if retData['ENTNAME'] else retData['ENTNAME'],
+                    bgxx['ALTITEM'].encode('utf-8') if bgxx['ALTITEM'] else bgxx['ALTITEM'],
+                    bgxx['ALTBE'].encode('utf-8') if bgxx['ALTBE'] else bgxx['ALTBE'],
+                    bgxx['ALTAF'].encode('utf-8') if bgxx['ALTAF'] else bgxx['ALTAF'],
+                    bgxx['ALTDATE'].encode('utf-8') if bgxx['ALTDATE'] else bgxx['ALTDATE'])
+    cursor = conn.cursor()
+    cursor.execute(bg_sql)
+    conn.commit()
+
+def add_czxx_to_mysql(conn, retData):
+    for czxx in retData['LEGINFO']:
+        czxx_sql = 'INSERT INTO gsxt_gdxx (公司名称, 股东名称, 股东类型, `证照/证件类型`, `证照/证件号码`, 详情) VALUES (\'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\')' % (
+            retData['ENTNAME'], czxx['INV'],'自然人股东',czxx['BLICTYPE'],czxx['BLICNO'],"")
+    cursor = conn.cursor()
+    cursor.execute(czxx_sql)
+    conn.commit()

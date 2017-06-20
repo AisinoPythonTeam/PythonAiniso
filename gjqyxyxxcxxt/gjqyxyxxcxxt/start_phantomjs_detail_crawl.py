@@ -36,14 +36,14 @@ def sys_exit(s):
     exit()
 
 @click.command()
+@click.option('--test', default=False, help='test flag')
 @click.option('--company_name', default=None, help='entry company to crawl')
-def forever_run(company_name):
-    time.sleep(3)
-    print company_name
+def forever_run(test, company_name):
     """ 不断启动进程、查询队列、初始化站点
         """
-    #if company_name is None:
-    #    return
+    if test and company_name is None:
+        print '请输入公司名称'
+        return
 
     mongo_db = Mongo().get_db()
     datas = list(mongo_db.ic_data.find({'status': 2}).sort([('last_crawl_time', pymongo.ASCENDING)]).limit(1))

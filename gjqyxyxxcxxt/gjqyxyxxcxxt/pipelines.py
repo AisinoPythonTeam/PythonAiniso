@@ -45,7 +45,7 @@ class GjqyxyxxcxxtPipeline(object):
         log.msg('>>>>>>>>>>>%s' % json_data, level=log.WARNING)
         self.uniq.set_value(item, json_data)
 
-
+        #lrj
         """
         if item['company_id']:
             self.mdb.ic_data.save(dict(item))
