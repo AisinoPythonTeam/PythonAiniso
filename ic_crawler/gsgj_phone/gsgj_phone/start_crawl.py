@@ -2,7 +2,7 @@
 """
     多进程方式生成crawler
     """
-import sys, os
+import sys, os, requests
 #免去环境变量配置
 app_dir = os.path.abspath("../")
 sys.path.append(app_dir)
@@ -20,7 +20,7 @@ from scrapy.utils.project import get_project_settings
 import pymongo
 from bson.objectid import ObjectId
 from gsgj_phone.database.my_mongo import Mongo
-
+from gsgj_phone.database.my_redis import UniqRedis
 from spiders.gsgj_phone_spider import GsgjPhoneSpider
 from gsgj_phone import settings
 from util.encode_handle import Encoder
@@ -39,14 +39,14 @@ def sys_exit(s):
 def forever_run():
     """ 不断启动进程、查询队列、初始化站点
         """
+    rdb = UniqRedis().conn()
     mongo_db = Mongo().get_db()
     # query
-    results = list(mongo_db.ic_data.find({"status" : 0}).sort([('last_crawl_time', pymongo.ASCENDING)]).limit(1))
+    results = list(mongo_db.ic_data.find({"status" : 0}).sort([('last_crawl_time', pymongo.ASCENDING)]).limit(2))
     if not results:
         print '无需要采集的数据源!!!'
         sys_exit(3)
     time.sleep(2)
-
     spiders = []
     for result in results:
         print result

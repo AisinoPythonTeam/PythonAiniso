@@ -3,7 +3,7 @@ def get_base_post_paramaters(key, company_name=''):
     #列表信息
     search_formdata ={
         'mobileAction': 'entSearch',
-        'keywords': u'%s' % '红麦聚信',
+        'keywords': u'%s' % '山西合盛达机电设备有限公司',
         'topic': '1',
         'pageNum': '1',
         'pageSize': '10',

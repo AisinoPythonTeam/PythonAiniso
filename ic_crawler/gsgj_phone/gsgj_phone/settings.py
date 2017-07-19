@@ -35,7 +35,7 @@ UNIQ_REDIS_HOST = '127.0.0.1'
 UNIQ_REDIS_PORT = 6379
 
 #log__________________________________________________________
-LOG_FILE = '../logs/crawler.log'
+LOG_FILE = '/Users/liurongjiang/git_test/PythonAiniso/ic_crawler/gsgj_phone/logs/crawler.log'
 LOG_LEVEL = 'DEBUG'
 
 DOWNLOADER_MIDDLEWARES = {

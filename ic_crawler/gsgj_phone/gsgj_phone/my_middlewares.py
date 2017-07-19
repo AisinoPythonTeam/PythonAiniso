@@ -1,14 +1,17 @@
 # -*- coding:utf-8 -*-
 import requests
 import os, base64, urllib, random
+from gsgj_phone.database.my_redis import UniqRedis
 from scrapy import log
 from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
 class ProxyMiddleware(object):
     #下载页面前调用,更改请求url地址
+    rdb = UniqRedis().conn()
     def process_request(self, request, spider):
         #启用代理
-        proxy = requests.get('http://api.ip.data5u.com/dynamic/get.html?order=68fcb9ab2ed1d14577ecb31b9c3c786f&sep=3')
-        request.meta['proxy'] = "http://%s" % proxy.text.strip()
+        #proxy_url = "http://%s" % self.rdb.get('proxy_ip')
+        #request.meta['proxy'] = "http://%s" % self.rdb.get('proxy_ip')
+        #log.msg('%s' % proxy_url, level=log.WARNING)
         """
         if 'is_proxy' in request.meta and request.meta['is_proxy']:
             request.meta['proxy'] = "http://204.74.210.83:53760"
@@ -18,7 +21,7 @@ class ProxyMiddleware(object):
             encoded_user_pass = base64.encodestring(proxy_user_pass)
             request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass
         """
-        log.msg('proxy:%s' % request.meta['proxy'],level=log.DEBUG)
+        #log.msg('proxy:%s' % request.meta['proxy'],level=log.DEBUG)
 
     #下载页面后调用,恢复原始url地址
     def process_response(self, request, response, spider):
