@@ -98,7 +98,7 @@ result = {
                 "REMARK":"" #备注
             }
         ],
-        "EXCEINFO":     #7经营异常
+        "EXCEINFO":[     #7经营异常
             {
                 "SPECAUSE":"",  #列入经营异常名录原因
                 "ABNTIME":"",   #列入日期
@@ -109,12 +109,12 @@ result = {
                 "YCORG":""      #移除机关
             }
         ],
-        "EQUINFO":      #8股权出质
+        "EQUINFO":[     #8股权出质
             {
                 "EQUPLEDATE":"",    #股权出质登记日期
                 "EQUITYNO":"",  #股权登记编号
-                "TYPE":"",·#状态
-                "IMPAM":"",·#出质股权数额
+                "TYPE":"", #状态
+                "IMPAM":"", #出质股权数额
                 "REGCAPCUR":"", #出质股权数额币种
                 "PLEDAMUNIT":"",    #出质股权数额单位
                 "PLEDGOR":"",   #出质人
@@ -125,7 +125,7 @@ result = {
                 "REMARK":""     #备注
             }
         ],
-        "MORTINFO":     #9动产抵押
+        "MORTINFO":[     #9动产抵押
             {
                 "MORREGCNO":"",     #动产抵押登记编号
                 "REGIDATE":"",      #登记日期
