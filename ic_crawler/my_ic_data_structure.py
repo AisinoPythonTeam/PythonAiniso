@@ -24,7 +24,8 @@ base_fields = {
     "LOGO":"",          #(22)logo图片
     "SHARESTYPE":"",    #(23)股票种类
     "SHORTNAME":"",     #(24)公司简称
-    "CITY":""           #(25)所在城市
+    "PROVINCE":"",      #(25)所在省份
+    "CITY":"",          #(26)所在城市
 }
 null_fields = {
     "TEL":"",           #(01)电话
@@ -51,7 +52,8 @@ null_fields = {
     "LOGO":"",          #(22)logo图片
     "SHARESTYPE":"",    #(23)股票种类
     "SHORTNAME":"",     #(24)公司简称
-    "CITY":"",          #(25)所在城市
+    "PROVINCE":"",      #(25)所在省份
+    "CITY":"",          #(26)所在城市
 
     "LEGINFO": [],      #2股东信息
     "PERINFO": [],      #3主要人员信息
@@ -90,7 +92,11 @@ null_fields = {
     "CCJC":[],          #33抽查检查
     "CPXX":[],          #34产品信息
     "ZZZS":[],          #35资质证书
-    "FREEZEINFO": []    #36股权冻结信息
+    "FREEZEINFO": [],   #36股权冻结信息
+    "SXBZX": [],        #37失信被执行人
+    "ZDSSWF": [],       #38重大税收违法案件
+    "ZFCGYZWF":[]       #39政府采购严重违法失信信息
+
 }
 
 #2股东信息
