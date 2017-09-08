@@ -93,10 +93,12 @@ null_fields = {
     "CPXX":[],          #34产品信息
     "ZZZS":[],          #35资质证书
     "FREEZEINFO": [],   #36股权冻结信息
-    "SXBZX": [],        #37失信被执行人
-    "ZDSSWF": [],       #38重大税收违法案件
-    "ZFCGYZWF":[]       #39政府采购严重违法失信信息
 
+    #司法部分____________________________
+    "sxgg": [],         #37失信公告
+    "cpws": [],         #38裁判文书
+    "zdsswf": [],       #39重大税收违法案件
+    "zfcgwf":[]         #40政府采购严重违法失信信息
 }
 
 #2股东信息
@@ -297,3 +299,108 @@ COPYRIGHT = {
     "AUTHOR_NATIONALITY":"",#著作权人(国籍)"
     "PUBLISHTIME":""        #首次发表日期
 }
+
+
+
+#司法部分
+#____________________________________________________________
+#失信公告
+sxgg = {
+    "md5_source":   "rowkey来源",
+    "md5":          "rowkey",
+    "frfzr":        "法定代表人或者负责人姓名",
+    "age":          "年龄",
+    "sex":          "性别",
+    "body":         "全部内容",
+    "lxqk":         "被执行人的履行情况",
+    "yiwu":         "生效法律文书确定的义务",
+    "court":        "执行法院",
+    "yjdw":         "做出执行依据单位",
+    "sortTime":     "立案时间时间戳", 
+    "province":     "省份",
+    "sortTimeString": "立案时间",
+    "jtqx":         "失信被执行人行为具体情形",
+    "pname":        "被执行人姓名/名称",
+    "postTime":     "发布时间",
+    "yjCode":       "执行依据文号",
+    "sxggId":       "法海自定义id",
+    "caseNo":       "案号",
+    "idcardNo":     "身份证号码/组织机构代码",
+    "ylx":          "已履行部分",
+    "wlx":          "未履行部分",
+    "datafrom":     "数据来源",
+    "dataType":     "sxgg"
+}
+
+#裁判文书
+cpws = {
+    "md5_source":       "rowkey来源",
+    "md5":              "rowkey",
+    "body":             "内容",
+    "partys": [{
+        "status":       "当事人立场 （p上诉人, d被上诉人,t第三人）",
+        "title":        "当事人称号",
+        "lawOffice":    "律师事务所",
+        "birthday":     "当事人生日",
+        "pname":        "当事人名称",
+        "lawyer":       "委托辩护人",
+        "address":      "当事人住所地", 
+        "idcardNo":     "当事人身份证号",
+        "partyType":    "当事人类型"}],
+    "court":            "法院名称",
+    "sortTime":         "审结时间",
+    "title":            "标题",
+    "caseCause":        "案由",
+    "judgeResult":      "判决结果", 
+    "trialProcedure":   "审理程序",
+    "cpwsId":           "法海自定义id",
+    "judge":            "审判员",
+    "caseType":         "文书类型",
+    "caseNo":           "案号",
+    "yiju":             "依据法律条文",
+    "dataType":         "cpws",
+    "courtRank":        "未知",
+    "anyou":            "未知",
+    "anyouType":        "未知",
+}
+
+#重大税收违法案件当事人名单字段
+zdsswf = {
+    "md5_source":       "rowkey来源",
+    "md5":              "rowkey",
+    "datafrom":         "数据来源",
+    "data_type":        "数据类别",
+    "pname":            "纳税人名称",
+    "NSRSBH":           "纳税人识别码",
+    "ORGAN_CODE":       "组织机构代码",
+    "DOM":              "注册地址",
+    "LEREP":            "法定代表人或者负责人姓名",
+    "LEREP_sex":        "法定代表人或者负责人性别",
+    "LEREP_zjmc":       "法定代表人或者负责人证件名称",
+    "cwfzr":            "负有直接责任的财务负责人姓名",
+    "cwfzr_sex":        "负有直接责任的财务负责人性别",
+    "cwfzr_zjmc":       "负有直接责任的财务负责人证件名称",
+    "zjjg":             "负有直接责任的中介机构信息及其从业人员信息",
+    "ajxz":             "案件性质",
+    "wfss":             "主要违法事实",
+    "yijujcf":          "相关法律依据及税务处理处罚情况",
+    "sbdate":           "案件上报期",
+    "update_date":      "最新更新日期"
+    }
+
+#政府采购严重违法失信信息
+zfcgwf = {
+    "md5_source":       "rowkey来源",
+    "md5":              "rowkey",
+    "datafrom":         "数据来源",
+    "data_type":        "数据类别",
+    "gysmc":            "供应商或代理机构名称",
+    "address":          "地址",
+    "jtqx":             "不良行为的具体情形",
+    "cfjg":             "处罚结果",
+    "yiju":             "处罚依据",
+    "cf_date":          "处罚（记录）日期",
+    "zfdw":             "执法（记录）单位",
+    "js_date":          "处罚结束时间",
+    "update_date":      "最新更新日期"
+    }
