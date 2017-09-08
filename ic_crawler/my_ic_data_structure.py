@@ -306,8 +306,8 @@ COPYRIGHT = {
 #____________________________________________________________
 #失信公告
 sxgg = {
-    "md5_source":   "rowkey来源",
-    "md5":          "rowkey",
+    "rowkeySource": "rowkey来源",
+    "rowkey":       "md5",
     "frfzr":        "法定代表人或者负责人姓名",
     "age":          "年龄",
     "sex":          "性别",
@@ -334,8 +334,8 @@ sxgg = {
 
 #裁判文书
 cpws = {
-    "md5_source":       "rowkey来源",
-    "md5":              "rowkey",
+    "rowkeySource":     "rowkey来源",
+    "rowkey":           "md5",
     "body":             "内容",
     "partys": [{
         "status":       "当事人立场 （p上诉人, d被上诉人,t第三人）",
@@ -366,41 +366,41 @@ cpws = {
 
 #重大税收违法案件当事人名单字段
 zdsswf = {
-    "md5_source":       "rowkey来源",
-    "md5":              "rowkey",
-    "datafrom":         "数据来源",
-    "data_type":        "数据类别",
-    "pname":            "纳税人名称",
-    "NSRSBH":           "纳税人识别码",
-    "ORGAN_CODE":       "组织机构代码",
-    "DOM":              "注册地址",
-    "LEREP":            "法定代表人或者负责人姓名",
-    "LEREP_sex":        "法定代表人或者负责人性别",
-    "LEREP_zjmc":       "法定代表人或者负责人证件名称",
-    "cwfzr":            "负有直接责任的财务负责人姓名",
-    "cwfzr_sex":        "负有直接责任的财务负责人性别",
-    "cwfzr_zjmc":       "负有直接责任的财务负责人证件名称",
+    "rowkeySource":     "rowkey来源",
+    "rowkey":           "md5",
+    "sjly":             "数据来源",
+    "sjlx":             "数据类别",
+    "nsrmc":            "纳税人名称",
+    "nsrsbh":           "纳税人识别码",
+    "zzjgdm":           "组织机构代码",
+    "dz":               "注册地址",
+    "frxm":             "法定代表人或者负责人姓名",
+    "frxb":             "法定代表人或者负责人性别",
+    "frzjmc":           "法定代表人或者负责人证件名称",
+    "cwfzrxm":          "负有直接责任的财务负责人姓名",
+    "cwfzrxb":          "负有直接责任的财务负责人性别",
+    "cwfzrzjmc":        "负有直接责任的财务负责人证件名称",
     "zjjg":             "负有直接责任的中介机构信息及其从业人员信息",
     "ajxz":             "案件性质",
     "wfss":             "主要违法事实",
-    "yijujcf":          "相关法律依据及税务处理处罚情况",
-    "sbdate":           "案件上报期",
-    "update_date":      "最新更新日期"
+    "yjcfqk":           "相关法律依据及税务处理处罚情况",
+    "sbrq":             "案件上报期",
+    "zxgxrq":           "最新更新日期"
     }
 
 #政府采购严重违法失信信息
 zfcgwf = {
-    "md5_source":       "rowkey来源",
-    "md5":              "rowkey",
-    "datafrom":         "数据来源",
-    "data_type":        "数据类别",
+    "rowkeySource":     "rowkey来源",
+    "rowkey":           "md5",
+    "sjly":             "数据来源",
+    "sjlx":             "数据类别",
     "gysmc":            "供应商或代理机构名称",
-    "address":          "地址",
+    "dz":               "地址",
     "jtqx":             "不良行为的具体情形",
     "cfjg":             "处罚结果",
-    "yiju":             "处罚依据",
-    "cf_date":          "处罚（记录）日期",
+    "cfyj":             "处罚依据",
+    "cfrq":             "处罚（记录）日期",
     "zfdw":             "执法（记录）单位",
-    "js_date":          "处罚结束时间",
-    "update_date":      "最新更新日期"
+    "cfjssj":           "处罚结束时间",
+    "zxgxrq":           "最新更新日期"
     }
