@@ -417,7 +417,7 @@ COPYRIGHT = {
 #税务评级
 taxRating = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "grade": "纳税等级",
     "year": "年份",
     "evalDepartment": "评价单位",
@@ -428,7 +428,7 @@ taxRating = {
 #网站备案
 websiteRecode = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "webSite" : "网站首页",
     "examineDate" : "检查时间",
     "companyType" : "公司类型",
@@ -441,7 +441,7 @@ websiteRecode = {
 #债券信息
 bondInfo = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "bondName": "债券名称",
     "bondNum": "债券代码",
     "publisherName": "发行人",
@@ -473,7 +473,7 @@ bondInfo = {
 #资质证书
 qualificationCertificate = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "licenceType" : "证书种类",
     "deviceName" : "设备名称",
     "deviceType" : "设备型号",
@@ -487,7 +487,7 @@ qualificationCertificate = {
 #抽查检查
 spotCheck = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "checkType" : "类型",
     "checkResult" : "结果",
     "checkOrg" : "检查实施机关",
@@ -497,7 +497,7 @@ spotCheck = {
 #产品信息
 productInfo = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "classes" : "领域",
     "filterName" : "产品简称",
     "icon" : "图标",
@@ -509,7 +509,7 @@ productInfo = {
 #招投标
 bidding = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "content" : "整个内容源码",
     "createTime" : "",
     "title" : "标题",
@@ -526,7 +526,7 @@ bidding = {
 #进出口信用_信用等级
 impExpCredit_xydj = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "creditRating" : "信用等级",
     "authenticationCode" : "认证证书编码",
     "identificationTime" : "认定时间"
@@ -535,7 +535,7 @@ impExpCredit_xydj = {
 #进出口信用_行政处罚
 impExpCredit_xzcf = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "penaltyDate" : "处罚日期",
     "natureOfCase" : "案件性质",
     "decisionNumber" : "行政处罚决定书编号",
@@ -545,7 +545,7 @@ impExpCredit_xzcf = {
 #进出口信用_注册信息
 impExpCredit_zcxx = {
     "rowkey" : "",
-    "rowkey_source" : "",
+    "rowkeySource" : "",
     "industryCategory" : "行业种类",
     "validityDate" : "报关有效期",
     "annualReport" : "年报情况",
