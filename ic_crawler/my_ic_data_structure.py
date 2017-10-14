@@ -1,33 +1,6 @@
 #coding=utf-8
-base_fields = {
-    "TEL":"",           #(01)电话
-    "EMAIL":"",         #(02)邮箱
-    "SITE":"",          #(03)网址
-    "ENTNAME":"",      #(04)企业名称
-    "REGNO":"",         #(05)工商注册号
-    "ORGAN_CODE":"",    #(06)组织机构代码
-    "NSRSBH":"",        #(07)纳税人识别号
-    "UNISCID":"",       #(08)统一信用代码
-    "LEREP":"",         #(09)法定代表人
-    "ENTTYPE":"",        #(10)类型
-    "TRADE":"",         #(11)行业
-    "REGCAP":"",        #(12)注册资本
-    "ESTDATE":"",       #(13)成立日期
-    "OPFROM":"",        #(14)经营期限自
-    "OPTO":"",          #(15)经营期限至
-    "REGORG":"",        #(16)登记机关
-    "APPRDATE":"",      #(17)核准日期
-    "DOM":"",           #(18)住所
-    "REGSTATE":"",      #(19)登记状态
-    "OPSCOPE":"",       #(20)经营范围
-    "AMBO":"",          #(21)股票代码
-    "LOGO":"",          #(22)logo图片
-    "SHARESTYPE":"",    #(23)股票种类
-    "SHORTNAME":"",     #(24)公司简称
-    "PROVINCE":"",      #(25)所在省份
-    "CITY":"",          #(26)所在城市
-}
-null_fields = {
+
+data_structure = {
     "TEL":"",           #(01)电话
     "EMAIL":"",         #(02)邮箱
     "SITE":"",          #(03)网址
@@ -55,52 +28,193 @@ null_fields = {
     "PROVINCE":"",      #(25)所在省份
     "CITY":"",          #(26)所在城市
 
-    "LEGINFO": [],      #2股东信息
-    "PERINFO": [],      #3主要人员信息
-    "BRANINFO": [],     #4分支机构
-    "CHGINFO": [],      #5变更信息
-    "PUNINFO": [],      #6行政处罚
-    "EXCEINFO": [],     #7经营异常
-    "EQUINFO": [],      #8股权出质
-    "MORTINFO": [],     #9动产抵押
+    #2股东信息
+    "LEGINFO": {
+        "operation":"replace",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #3主要人员信息
+    "PERINFO": {
+        "operation":"replace",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #4分支机构
+    "BRANINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #5变更信息
+    "CHGINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #6行政处罚
+    "PUNINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #7经营异常
+    "EXCEINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #8股权出质
+    "EQUINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #9动产抵押
+    "MORTINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #12对外投资
+    "INVEST": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #17严重违法
+    "LAWINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #欠税公告
+    "TOWNTAX": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #商标信息
+    "TMINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #专利
+    "PATENT": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #著作权
+    "COPYRIGHT": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
+    #股权冻结信息
+    "FREEZEINFO": {
+        "operation":"append",
+        "data_type":"gs_V1",
+        "data": []
+    },
 
-    "QYGX":[],          #10企业关系
-    "QYNB":[],          #11企业年报
-    "INVEST":[],        #12对外投资
-    "FLSS":[],          #13法律诉讼
-    "FYGG":[],          #14法院公告
-    "SXR":[],           #15失信人
-    "BZXR":[],          #16被执行人
 
-    "LAWINFO": [],      #17严重违法
-    "TOWNTAX":[],       #18欠税公告
-    "TMINFO":[],        #19商标信息
-    "PATENT":[],        #20专利
-    "COPYRIGHT":[],     #21著作权
+# V3新增_________________________________
+    #网站备案
+    "websiteRecode":{
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #招投标
+    "bidding": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #债券信息
+    "bondInfo": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #税务评级
+    "taxRating": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #资质证书
+    "qualificationCertificate": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #抽查检查
+    "spotCheck": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #产品信息
+    "productInfo": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #进出口信用_信用等级
+    "impExpCredit_xydj": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #进出口信用_行政处罚
+    "impExpCredit_xzcf": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #进出口信用_注册信息
+    "impExpCredit_zcxx": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
 
-    "WZBA":[],          #22网站备案
-    "RZLS":[],          #23融资历史
-    "HXTD":[],          #24核心团队
-    "QYYW":[],          #25企业业务
-    "TZSJ":[],          #26投资事件
-    "JPXX":[],          #27竞品信息
-    "ZTB":[],           #28招投标
-    "ZQXX":[],          #29债券信息
-    "GDXX":[],          #30购地信息
-    "ZPXX":[],          #31招聘信息
-    "SWPJ":[],          #32税务评级
-    "CCJC":[],          #33抽查检查
-    "CPXX":[],          #34产品信息
-    "ZZZS":[],          #35资质证书
-    "FREEZEINFO": [],   #36股权冻结信息
 
-    #司法部分____________________________
-    "sxgg": [],         #37失信公告
-    "cpws": [],         #38裁判文书
-    "zdsswf": [],       #39重大税收违法案件
-    "zfcgwf":[]         #40政府采购严重违法失信信息
+#信用中国部分—————————————————————————————
+    #失信公告
+    "sxgg": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #重大税收违法案件
+    "zdsswf": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #政府采购严重违法失信信息
+    "zfcgwf": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+
+#司法部分—————————————————————————————
+    #裁判文书
+    "cpws": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    }
 }
 
+
+
+#****************************************************************
 #2股东信息
 LEGINFO =  {
     "ID": "",       #唯一标示
@@ -300,10 +414,153 @@ COPYRIGHT = {
     "PUBLISHTIME":""        #首次发表日期
 }
 
+#税务评级
+taxRating = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "grade": "纳税等级",
+    "year": "年份",
+    "evalDepartment": "评价单位",
+    "type": "0国税 1地税",
+    "idNumber": "纳税人识别号",
+    "name": "纳税人名称"
+}
+#网站备案
+websiteRecode = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "webSite" : "网站首页",
+    "examineDate" : "检查时间",
+    "companyType" : "公司类型",
+    "webName" : "网站名称",
+    "liscense" : "许可证",
+    "companyName" : "公司名称",
+    "ym" : "域名"
+}
+
+#债券信息
+bondInfo = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "bondName": "债券名称",
+    "bondNum": "债券代码",
+    "publisherName": "发行人",
+    "bondType": "债券类型",
+    "publishExpireTime": "债劵到期日",
+    "publishTime": "债劵发行日",
+    "bondTimeLimit": "债劵期限",
+    "ssjyr" : "上市交易日",
+    "calInterestType": "计息方式",
+    "bondStopTime": "债劵摘牌日",
+    "xxpjjg" : "信用评级机构",
+    "debtRating": "债项评级",
+    "faceValue": "面值",
+    "ccll" : "参考利率",
+    "pmll" : "票面利率",
+    "realIssuedQuantity": "实际发行量(亿)",
+    "planIssuedQuantity": "计划发行量(亿)",
+    "issuedPrice": "发行价格(元)",
+    "lc" : "利差（BP）",
+    "payInterestHZ": "付息频率",
+    "startCalInterestTime": "债券起息日",
+    "exeRightType": "行权类型",
+    "xqrq" : "行权日期",
+    "createTime": "发行日期",
+    "escrowAgent": "托管机构",
+    "flowRange": "流通范围",
+}
+
+#资质证书
+qualificationCertificate = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "licenceType" : "证书种类",
+    "deviceName" : "设备名称",
+    "deviceType" : "设备型号",
+    "applyCompany" : "申请单位",
+    "issueDate" : "发证日期",
+    "toDate" : "有效期至",
+    "productCompany" : "生产企业",
+    "licenceNum" : "许可证编号"
+}
+
+#抽查检查
+spotCheck = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "checkType" : "类型",
+    "checkResult" : "结果",
+    "checkOrg" : "检查实施机关",
+    "checkDate" : "日期"
+}
+
+#产品信息
+productInfo = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "classes" : "领域",
+    "filterName" : "产品简称",
+    "icon" : "图标",
+    "type" : "产品分类",
+    "brief" : "描述",
+    "name" : "产品名称"
+}
+
+#招投标
+bidding = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "content" : "整个内容源码",
+    "createTime" : "",
+    "title" : "标题",
+    "purchaser" : "采购人",
+    "abs" : "公告概要",
+    "publishTime" : "发布时间",
+    "updateTime" : "",
+    "proxy" : "公司名称",
+    "link" : "原始链接",
+    "pid" : "",
+    "uuid" : "",
+    "intro" : "全部内容"  # 去掉源码中无用信息
+}
+#进出口信用_信用等级
+impExpCredit_xydj = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "creditRating" : "信用等级",
+    "authenticationCode" : "认证证书编码",
+    "identificationTime" : "认定时间"
+}
+
+#进出口信用_行政处罚
+impExpCredit_xzcf = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "penaltyDate" : "处罚日期",
+    "natureOfCase" : "案件性质",
+    "decisionNumber" : "行政处罚决定书编号",
+    "party" : "当事人"
+}
+
+#进出口信用_注册信息
+impExpCredit_zcxx = {
+    "rowkey" : "",
+    "rowkey_source" : "",
+    "industryCategory" : "行业种类",
+    "validityDate" : "报关有效期",
+    "annualReport" : "年报情况",
+    "economicDivision" : "经济区划",
+    "status" : "海关注销标识",
+    "recordDate" : "recordDate",
+    "managementCategory" : "经营类别",
+    "administrativeDivision" : "行政区划",
+    "crCode" : "海关注册号",
+    "specialTradeArea" : "特殊贸易区域",
+    "customsRegisteredAddress" : "注册海关",
+    "types" : "跨境贸易电子商务类型"
+}
 
 
-#司法部分
-#____________________________________________________________
 #失信公告
 sxgg = {
     "rowkeySource": "rowkey来源",
