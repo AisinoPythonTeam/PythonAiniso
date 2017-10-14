@@ -193,13 +193,13 @@ data_structure = {
     #重大税收违法案件
     "zdsswf": {
         "operation":"append",
-        "data_type":"gs",
+        "data_type":"sw",
         "data": []
     },
     #政府采购严重违法失信信息
     "zfcgwf": {
         "operation":"append",
-        "data_type":"gs",
+        "data_type":"cz",
         "data": []
     },
 
@@ -207,7 +207,7 @@ data_structure = {
     #裁判文书
     "cpws": {
         "operation":"append",
-        "data_type":"gs",
+        "data_type":"sf",
         "data": []
     }
 }
