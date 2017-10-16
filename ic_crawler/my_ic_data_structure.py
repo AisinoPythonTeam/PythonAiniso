@@ -511,16 +511,12 @@ bidding = {
     "rowkey" : "",
     "rowkeySource" : "",
     "content" : "整个内容源码",
-    "createTime" : "",
     "title" : "标题",
     "purchaser" : "采购人",
     "abs" : "公告概要",
     "publishTime" : "发布时间",
-    "updateTime" : "",
     "proxy" : "公司名称",
     "link" : "原始链接",
-    "pid" : "",
-    "uuid" : "",
     "intro" : "全部内容"  # 去掉源码中无用信息
 }
 #进出口信用_信用等级
