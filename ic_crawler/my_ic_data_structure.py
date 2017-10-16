@@ -565,7 +565,7 @@ impExpCredit_zcxx = {
     "annualReport" : "年报情况",
     "economicDivision" : "经济区划",
     "status" : "海关注销标识",
-    "recordDate" : "recordDate",
+    "recordDate" : "注册日期",
     "managementCategory" : "经营类别",
     "administrativeDivision" : "行政区划",
     "crCode" : "海关注册号",
