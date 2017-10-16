@@ -425,17 +425,18 @@ taxRating = {
     "idNumber": "纳税人识别号",
     "name": "纳税人名称"
 }
+
 #网站备案
 websiteRecode = {
     "rowkey" : "",
     "rowkeySource" : "",
-    "webSite" : "网站首页",
     "examineDate" : "检查时间",
-    "companyType" : "公司类型",
     "webName" : "网站名称",
-    "liscense" : "许可证",
-    "companyName" : "公司名称",
-    "ym" : "域名"
+    "webSite" : "网站首页",
+    "ym" : "域名",
+    "bah" : "备案号",
+    "status" : "状态",
+    "companyType" : "公司类型",
 }
 
 #债券信息
@@ -474,14 +475,31 @@ bondInfo = {
 qualificationCertificate = {
     "rowkey" : "",
     "rowkeySource" : "",
-    "licenceType" : "证书种类",
+    "licenceType" : "证书类型",
+    "zsbh" : "证书编号",
+    "issueDate" : "发证日期",
+    "jzrq" : "截止日期",
+    "companyName" : "企业名称/申请人",
+    "bz" : "标准",
+    "ztbhsj" : "证书状态变化时间",
+    "reason" : "原因",
+    "scc" : "生产厂",
+    "scfzrq" : "首次发证日期",
+    "cpmc" : "产品名称",
+    "zzs" : "制造商",
+    "xinghao" : "型号/规格",
+    "xzt" : "现状态",
+    "ywzl" : "业务种类",
+    "xkzbh" : "许可证编号",
+    "ywfgfw" : "业务覆盖范围",
+    "toDate" : "有效期至",
+    "hm" : "号码",
+    "sydw" : "使用单位",
+    "pzyt" : "批准用途",
     "deviceName" : "设备名称",
     "deviceType" : "设备型号",
     "applyCompany" : "申请单位",
-    "issueDate" : "发证日期",
-    "toDate" : "有效期至",
     "productCompany" : "生产企业",
-    "licenceNum" : "许可证编号"
 }
 
 #抽查检查
