@@ -119,7 +119,6 @@ data_structure = {
         "data": []
     },
 
-
 # V3新增_________________________________
     #网站备案
     "websiteRecode":{
@@ -163,24 +162,13 @@ data_structure = {
         "data_type":"gs",
         "data": []
     },
-    #进出口信用_信用等级
-    "impExpCredit_xydj": {
+    #进出口信用
+    "impExpCredit": {
         "operation":"append",
         "data_type":"gs",
         "data": []
     },
-    #进出口信用_行政处罚
-    "impExpCredit_xzcf": {
-        "operation":"append",
-        "data_type":"gs",
-        "data": []
-    },
-    #进出口信用_注册信息
-    "impExpCredit_zcxx": {
-        "operation":"append",
-        "data_type":"gs",
-        "data": []
-    },
+
 
 
 #信用中国部分—————————————————————————————
@@ -537,43 +525,43 @@ bidding = {
     "link" : "原始链接",
     "intro" : "全部内容"  # 去掉源码中无用信息
 }
-#进出口信用_信用等级
-impExpCredit_xydj = {
+
+
+
+impExpCredit = {
     "rowkey" : "",
     "rowkeySource" : "",
-    "creditRating" : "信用等级",
-    "authenticationCode" : "认证证书编码",
-    "identificationTime" : "认定时间"
+    "xydj":[
+        {
+        "creditRating" : "信用等级",
+        "authenticationCode" : "认证证书编码",
+        "identificationTime" : "认定时间"
+        }
+    ],
+    "xzcf": [
+        {
+            "penaltyDate" : "处罚日期",
+            "natureOfCase" : "案件性质",
+            "decisionNumber" : "行政处罚决定书编号",
+            "party" : "当事人"
+        }
+    ],
+    "zcxx":
+        {
+            "industryCategory" : "行业种类",
+            "validityDate" : "报关有效期",
+            "annualReport" : "年报情况",
+            "economicDivision" : "经济区划",
+            "status" : "海关注销标识",
+            "recordDate" : "注册日期",
+            "managementCategory" : "经营类别",
+            "administrativeDivision" : "行政区划",
+            "crCode" : "海关注册号",
+            "specialTradeArea" : "特殊贸易区域",
+            "customsRegisteredAddress" : "注册海关",
+            "types" : "跨境贸易电子商务类型"
+        }
 }
-
-#进出口信用_行政处罚
-impExpCredit_xzcf = {
-    "rowkey" : "",
-    "rowkeySource" : "",
-    "penaltyDate" : "处罚日期",
-    "natureOfCase" : "案件性质",
-    "decisionNumber" : "行政处罚决定书编号",
-    "party" : "当事人"
-}
-
-#进出口信用_注册信息
-impExpCredit_zcxx = {
-    "rowkey" : "",
-    "rowkeySource" : "",
-    "industryCategory" : "行业种类",
-    "validityDate" : "报关有效期",
-    "annualReport" : "年报情况",
-    "economicDivision" : "经济区划",
-    "status" : "海关注销标识",
-    "recordDate" : "注册日期",
-    "managementCategory" : "经营类别",
-    "administrativeDivision" : "行政区划",
-    "crCode" : "海关注册号",
-    "specialTradeArea" : "特殊贸易区域",
-    "customsRegisteredAddress" : "注册海关",
-    "types" : "跨境贸易电子商务类型"
-}
-
 
 #失信公告
 sxgg = {
