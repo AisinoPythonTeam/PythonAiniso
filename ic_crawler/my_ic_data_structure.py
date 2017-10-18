@@ -569,6 +569,8 @@ impExpCredit = {
 }
 
 companyRelationship = {
+    "rowkeySource": "rowkey来源",
+    "rowkey":       "md5",
     "result": "json串"
 }
 
