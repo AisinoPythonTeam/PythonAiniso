@@ -168,6 +168,12 @@ data_structure = {
         "data_type":"gs",
         "data": []
     },
+    #企业关系
+    "companyRelationship": {
+        "operation":"replace",
+        "data_type":"gs",
+        "data": []
+    },
 
 
 
@@ -527,7 +533,6 @@ bidding = {
 }
 
 
-
 impExpCredit = {
     "rowkey" : "",
     "rowkeySource" : "",
@@ -561,6 +566,10 @@ impExpCredit = {
             "customsRegisteredAddress" : "注册海关",
             "types" : "跨境贸易电子商务类型"
         }
+}
+
+companyRelationship = {
+    "result": "json串"
 }
 
 #失信公告
