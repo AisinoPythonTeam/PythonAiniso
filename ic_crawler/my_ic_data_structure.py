@@ -686,18 +686,7 @@ zfcgwf = {
     "zxgxrq":           "最新更新日期"
 }
 
-#守信红名单
-sxhmd = {
-    "rowkeySource":     "rowkey来源",
-    "rowkey":           "md5",
-    "NSRSBH":           "纳税人识别号",
-    "xh":               "序号",
-    "nsrmc":            "纳税人名称",
-    "pjnd":             "评价年度",
-    "gxrq":             "最新更新日期",
-    "wjm":              "文件名"
-}
-
+#守信红名单 与税务评级一致
 
 #异常名录 与 tyc、gsxt的经营异常差距较大
 ycml = {
