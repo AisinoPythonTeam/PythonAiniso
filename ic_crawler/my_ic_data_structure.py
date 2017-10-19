@@ -216,6 +216,13 @@ data_structure = {
         "data": []
     },
 
+    #重点关注名单
+    "zdgz": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+
 #司法部分—————————————————————————————
     #裁判文书
     "cpws": {
@@ -691,6 +698,7 @@ sxhmd = {
     "wjm":              "文件名"
 }
 
+
 #异常名录 与 tyc、gsxt的经营异常差距较大
 ycml = {
     "rowkeySource":     "rowkey来源",
@@ -710,6 +718,26 @@ ycml = {
     "yxsj":             "有效时间"
 }
 
+#重点关注名单
+zdgz = {
+    "rowkeySource":     "rowkey来源",
+    "rowkey":           "md5",
+    "xh":               "序号",
+    "ccph":             "抽查批号",
+    "cpmc":             "产品名称",
+    "cpxxmc":           "产品详细名称",
+    "ENTNAME":          "企业名称",
+    "province":         "企业所在省",
+    "city":             "企业所在市",
+    "shangbiao":        "商标",
+    "ggxx":             "规格型号",
+    "scrq_ph":          "生产日期/批号",
+    "cpdj":             "产品等级",
+    "ccjg":             "抽查结果",
+    "bhgxm":            "不合格项目",
+    "cjdw":             "承检单位",
+    "zxgxrq":           "最新更新日期"
+}
 
 #司法部分 __________________________________________________
 #裁判文书
