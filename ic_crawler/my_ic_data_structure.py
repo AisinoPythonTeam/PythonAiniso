@@ -196,6 +196,25 @@ data_structure = {
         "data_type":"cz",
         "data": []
     },
+    #行政许可
+    "xzxk": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+    #异常名录
+    "ycml": {
+        "operation":"append",
+        "data_type":"gs",
+        "data": []
+    },
+
+    #守信红名单
+    "sxhmd": {
+        "operation":"append",
+        "data_type":"sw",
+        "data": []
+    },
 
 #司法部分—————————————————————————————
     #裁判文书
@@ -574,6 +593,23 @@ companyRelationship = {
     "result": "json串"
 }
 
+
+#信用中国部分————————————————————————————————————————————————
+#行政许可
+xzxk = {
+    "rowkeySource":     "rowkey来源",
+    "rowkey":           "md5",
+    "xkjdwsh":          "行政许可决定文书号",
+    "shlx":             "审核类型",
+    "frdb":             "法人代表",
+    "nrxk":             "内容许可",
+    "xkyxq":            "许可有效期",
+    "xkjzq":            "许可截止期",
+    "dfbm":             "地方编码",
+    "xkjg":             "许可机关"
+}
+#行政处罚与原版一致
+
 #失信公告
 sxgg = {
     "rowkeySource": "rowkey来源",
@@ -600,38 +636,6 @@ sxgg = {
     "wlx":          "未履行部分",
     "datafrom":     "数据来源",
     "dataType":     "sxgg"
-}
-
-#裁判文书
-cpws = {
-    "rowkeySource":     "rowkey来源",
-    "rowkey":           "md5",
-    "body":             "内容",
-    "partys": [{
-        "status":       "当事人立场 （p上诉人, d被上诉人,t第三人）",
-        "title":        "当事人称号",
-        "lawOffice":    "律师事务所",
-        "birthday":     "当事人生日",
-        "pname":        "当事人名称",
-        "lawyer":       "委托辩护人",
-        "address":      "当事人住所地", 
-        "idcardNo":     "当事人身份证号",
-        "partyType":    "当事人类型"}],
-    "court":            "法院名称",
-    "sortTime":         "审结时间",
-    "title":            "标题",
-    "caseCause":        "案由",
-    "judgeResult":      "判决结果", 
-    "trialProcedure":   "审理程序",
-    "cpwsId":           "法海自定义id",
-    "judge":            "审判员",
-    "caseType":         "文书类型",
-    "caseNo":           "案号",
-    "yiju":             "依据法律条文",
-    "dataType":         "cpws",
-    "courtRank":        "未知",
-    "anyou":            "未知",
-    "anyouType":        "未知",
 }
 
 #重大税收违法案件当事人名单字段
@@ -673,4 +677,69 @@ zfcgwf = {
     "zfdw":             "执法（记录）单位",
     "cfjssj":           "处罚结束时间",
     "zxgxrq":           "最新更新日期"
-    }
+}
+
+#守信红名单
+sxhmd = {
+    "rowkeySource":     "rowkey来源",
+    "rowkey":           "md5",
+    "NSRSBH":           "纳税人识别号",
+    "xh":               "序号",
+    "nsrmc":            "纳税人名称",
+    "pjnd":             "评价年度",
+    "gxrq":             "最新更新日期",
+    "wjm":              "文件名"
+}
+
+#异常名录 与 tyc、gsxt的经营异常差距较大
+ycml = {
+    "rowkeySource":     "rowkey来源",
+    "rowkey":           "md5",
+    "ycmlID":           "经营异常名录ID",
+    "ztsfdm":           "主体身份代码",
+    "qymc":             "企业名称",
+    "UNISCID":          "统一社会信用代码",
+    "zch":              "注册号",
+    "LEREP":            "法定代表人",
+    "zjlx":             "证件类型",
+    "lryylx":           "列入经营异常名录原因类型",
+    "lrlxmc":           "列入经营异常目录原因类型名称",
+    "slrq":             "设立日期",
+    "lrjdjg":           "列入决定机关",
+    "lrjdjgmc":         "列入决定机关名称",
+    "yxsj":             "有效时间"
+}
+
+
+#司法部分 __________________________________________________
+#裁判文书
+cpws = {
+    "rowkeySource":     "rowkey来源",
+    "rowkey":           "md5",
+    "body":             "内容",
+    "partys": [{
+        "status":       "当事人立场 （p上诉人, d被上诉人,t第三人）",
+        "title":        "当事人称号",
+        "lawOffice":    "律师事务所",
+        "birthday":     "当事人生日",
+        "pname":        "当事人名称",
+        "lawyer":       "委托辩护人",
+        "address":      "当事人住所地", 
+        "idcardNo":     "当事人身份证号",
+        "partyType":    "当事人类型"}],
+    "court":            "法院名称",
+    "sortTime":         "审结时间",
+    "title":            "标题",
+    "caseCause":        "案由",
+    "judgeResult":      "判决结果", 
+    "trialProcedure":   "审理程序",
+    "cpwsId":           "法海自定义id",
+    "judge":            "审判员",
+    "caseType":         "文书类型",
+    "caseNo":           "案号",
+    "yiju":             "依据法律条文",
+    "dataType":         "cpws",
+    "courtRank":        "未知",
+    "anyou":            "未知",
+    "anyouType":        "未知",
+}
