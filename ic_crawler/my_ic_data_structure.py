@@ -175,7 +175,12 @@ data_structure = {
         "data": []
     },
 
-
+    #高管信息
+    "seniorPeople": {
+        "operation":"replace",
+        "data_type":"gs",
+        "data": []
+    },
 
 #信用中国部分—————————————————————————————
     #失信公告
@@ -558,6 +563,21 @@ bidding = {
     "intro" : "全部内容"  # 去掉源码中无用信息
 }
 
+#高管信息
+seniorPeople = {
+    "rowkey" : "",
+    "rowkeySource" : "",
+    "position": "职务",
+    "sex": "性别",
+    "education": "学历",
+    "resume": "简介",
+    "term": "本届任期",
+    "name": "姓名",
+    "age": "年龄",
+    "reportDate": "公告日期",
+    "salary": "薪酬",
+    "numberOfShares": "持股数"
+}
 
 impExpCredit = {
     "rowkey" : "",
@@ -760,3 +780,4 @@ cpws = {
     "anyou":            "未知",
     "anyouType":        "未知",
 }
+
