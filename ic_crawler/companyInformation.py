@@ -37,8 +37,8 @@ companyInformation = {
     #32 administrativeLicensing     行政许可
     #33 purchaseIllegal             政府采购严重违法失信信息
 
-    #34 administrativePenalty         行政处罚2（xyzg+sw）
-    #35 owingTaxesNotice              欠税公告2  sw 
+    #34 administrativePenalty       行政处罚2（xyzg+sw）
+    #35 owingTaxesNotice            欠税公告2  sw 
 }
 
 LEGINFO                 ={"operation":"replace", "data_type":"gs_V1", "data": []}
@@ -55,6 +55,7 @@ PATENT                  ={"operation":"append",  "data_type":"gs_V1", "data": []
 COPYRIGHT               ={"operation":"append",  "data_type":"gs_V1", "data": []}
 FREEZEINFO              ={"operation":"append",  "data_type":"gs_V1", "data": []}
 PUNINFO                 ={"operation":"append",  "data_type":"gs_V1", "data": []}
+TOWNTAX                 ={"operation":"append",  "data_type":"sw",    "data": []}
 basicInfo               ={"operation":"replace", "data_type":"gs_V1", "data": []}
 
 productInfo             ={"operation":"append",  "data_type":"gs",    "data": []}
@@ -64,11 +65,10 @@ seniorPeople            ={"operation":"replace", "data_type":"gs",    "data": []
 websiteRecode           ={"operation":"append",  "data_type":"gs",    "data": []}
 spotCheck               ={"operation":"append",  "data_type":"gs",    "data": []}
 impExpCredit            ={"operation":"append",  "data_type":"gs",    "data": []}
-administrativeLicensing = {"operation":"append",  "data_type":"gs",    "data": []}
+administrativeLicensing = {"operation":"append", "data_type":"gs",    "data": []}
 administrativePenalty   ={"operation":"append",  "data_type":"gs",    "data": []}
 
 taxRating               ={"operation":"append",  "data_type":"sw",    "data": []}
-TOWNTAX                 ={"operation":"append",  "data_type":"sw",    "data": []}
 taxContrave             ={"operation":"append",  "data_type":"sw",    "data": []}
 missNotice              ={"operation":"append",  "data_type":"sw",    "data": []}
 taxRegist               ={"operation":"append",  "data_type":"sw",    "data": []}
