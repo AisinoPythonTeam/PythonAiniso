@@ -1,0 +1,27 @@
+    dataSource: {
+        crm:        1,
+        xyzg:       2,
+        zw_api:     4,
+        tyc:        8,
+        tyc_api:    16,
+        gsxt:       32,
+        dfgsxt:     64
+    },
+    richLevel: {
+        crm:        1,
+        xyzg:       2,
+        zw_api:     4,
+        gsxt:       8,
+        dfgsxt:     16,
+        tyc:        32,
+        tyc_api:    64
+    },
+    qualityLevel: {
+        crm:        1,
+        zw_api:     2,
+        tyc:        4,
+        tyc_api:    8,
+        xyzg:       16,
+        gsxt:       32,
+        dfgsxt:     64
+    }
